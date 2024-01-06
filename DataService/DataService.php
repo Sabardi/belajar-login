@@ -1,7 +1,7 @@
 <?php
 include "../database.php";
 $database = new Database();
-$data_service = $database->data_service();
+$data_service = $database->Data_Service();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,16 +36,17 @@ $data_service = $database->data_service();
                 <td><?= $data['tanggal_masuk']?></td>
                 <td><?= $data['deskripsi']?></td>
                 <td>
-                    <button><a href="edit.php?id=<?= $data['id_service'];?>">edit</a></button>
+                <a href="edit.php?id_service=<?php echo $data['id_service']; ?>&aksi=edit">Edit</a>
+                <a href="proses.php?id_service=<?php echo $data['id_service']; ?>&aksi=hapus"
+            	onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</a>
                 </td>
             </tr>
             <?php
             }
             ?>
         </table>
-    </center>
-
     <button><a href="../index.php">kembali ke dashbord</a></button>
-    
+
+    </center>    
 </body>
 </html>
