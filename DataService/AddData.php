@@ -13,7 +13,14 @@
                 <tr>
                     <td><span>Nama perangkat</span></td>
                     <td>:</td>
-                    <td><input type="text" name="nama_perangkat" id="nama_perangkat"></td>
+                    <td>
+                    <select name="nama_perangkat" id="nama_perangkat">
+                        <option value="komputer">komputer</option>
+                        <option value="laptop">laptop</option>
+                        <option value="perkalian">perkalian</option>
+                        <option value="pembagian">pembagian</option>
+                    </select>
+                    <!-- <input type="text" name="nama_perangkat" id="nama_perangkat"></td> -->
                 </tr>
                 <tr>
                     <td><span>Model</span></td>
