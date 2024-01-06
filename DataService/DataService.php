@@ -36,7 +36,7 @@ $data_service = $database->data_service();
                 <td><?= $data['tanggal_masuk']?></td>
                 <td><?= $data['deskripsi']?></td>
                 <td>
-                    <button><a href="edit.php?id=<?= $data['id_service'];?>">edit</a></button>
+                    <button><a href="edit.php?id=<?= $data['id_service'];?>&aksi=edit">edit</a></button>
                 </td>
             </tr>
             <?php

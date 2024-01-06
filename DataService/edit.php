@@ -15,7 +15,7 @@ $database = new database();
     foreach($database->edit_service($_GET['id']) as $data){
     ?>
     <center>
-        <form action="" method="post">
+        <form action="proses.php?aksi=update" method="post">
             <table>
                 <tr>
                     <td></td>
@@ -46,7 +46,7 @@ $database = new database();
                     </td>
                 </tr>
                 <tr>
-                    <td>deskripsi</td>
+                    <td><span>Deskripsi</span></td>
                     <td>:</td>
                     <td>
                         <input type="text" name="deskripsi" id="deskripsi" value="<?= $data['deskripsi'] ?>">
