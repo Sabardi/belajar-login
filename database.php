@@ -42,6 +42,17 @@ class database{
 	function Update_data_service($id,$nama_perangkat,$model,$tanggal_masuk,$deskripsi){
 		mysqli_query($this->koneksi,"update tb_service set nama_perangkat='$nama_perangkat', model='$model', tanggal_masuk='$tanggal_masuk',deskripsi='$deskripsi' where id_service='$id'");
 	}
+
+    //     // clas tampil layanan
+	function Data_Pelanggan()
+	{
+		$data = mysqli_query($this->koneksi,"select * from tb_pelanggan");
+		while($row = mysqli_fetch_array($data)){
+			$hasil[] = $row;
+		}
+		return $hasil;
+	}
+
 }
 
 ?>

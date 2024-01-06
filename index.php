@@ -10,7 +10,7 @@
         <h1>selamat datang admin</h1>
         <ul>   
             <li>
-            <a href="./DataPelanggan/DataPelanggan.php">Data pelanggan</a>
+            <a href="./DataPelanggan/index_pelanggan.php">Data pelanggan</a>
             </li>
         </ul>
         <ul>

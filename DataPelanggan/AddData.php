@@ -36,7 +36,7 @@
                     <td></td>
                     <td>
                         <button type="submit">simpan</button>
-                        <button><a href="DataPelanggan.php">batal</a></button>
+                        <button><a href="index_pelanggan.php">batal</a></button>
                     </td>
                 </tr>
             </table>

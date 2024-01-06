@@ -21,6 +21,7 @@ $data_service = $database->Data_Pelanggan();
                 <th>Nama</th>
                 <th>alamat</th>
                 <th>no telpon</th>
+                <th>aksi</th>
             </tr>
 
             <?php
@@ -31,7 +32,12 @@ $data_service = $database->Data_Pelanggan();
             <tr>
                 <td><?= $no++?></td>
                 <td><?= $data['nama']?></td>
-                <td><?= $data['tanggal_masuk']?></td>
+                <td><?= $data['alamat']?></td>
+                <td><?= $data['no_hp']?></td>
+                <td>
+                <a href="edit.php?Id_pelanggan=<?= $data['Id_pelanggan']; ?>&aksi=edit">Edit</a>
+                <a href="proses.php?Id_pelanggan=<?= $data['Id_pelanggan']; ?>&aksi=hapus"
+            	onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</a>
             </tr>
             <?php
             }
