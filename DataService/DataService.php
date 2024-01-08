@@ -45,7 +45,7 @@ $data_service = $database->Data_Service();
             }
             ?>
         </table>
-    <button><a href="../index.php">kembali ke dashbord</a></button>
+    <button><a href="../index-admin.php">kembali ke dashbord</a></button>
 
     </center>    
 </body>

@@ -1,5 +1,5 @@
 <?php
-include "../DatabasePelanggan.php";
+include "../database.php";
 $database = new database();
 
 $aksi = $_GET["aksi"];

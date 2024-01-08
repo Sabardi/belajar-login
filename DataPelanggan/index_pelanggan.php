@@ -1,5 +1,5 @@
 <?php
-include "../DatabasePelanggan.php";
+include "../database.php";
 $database = new Database();
 $data_service = $database->Data_Pelanggan();
 ?>
@@ -46,7 +46,7 @@ $data_service = $database->Data_Pelanggan();
         </table>
 
         <br>
-        <button><a href="../index.php">ke dashboard</a></button>
+        <button><a href="../index-admin.php">ke dashboard</a></button>
     </center>
     
 </body>

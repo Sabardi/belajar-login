@@ -102,7 +102,7 @@ class database{
 		mysqli_query($this->koneksi,"update tb_service set nama_perangkat='$nama_perangkat', model='$model', tanggal_masuk='$tanggal_masuk',deskripsi='$deskripsi' where id_service='$id'");
 	}
 
-    //     // clas tampil layanan
+    //     // clas tampil pelanggan start
 	function Data_Pelanggan()
 	{
 		$data = mysqli_query($this->koneksi,"select * from tb_pelanggan");
@@ -111,6 +111,32 @@ class database{
 		}
 		return $hasil;
 	}
+// tambah pelanggan start
+	function Input_data_pelanggan($nama, $alamat, $no_tlpn){
+		mysqli_query($this->koneksi,"insert into tb_pelanggan values ('','$nama','$alamat','$no_tlpn')");
+	}
+// tambah pelanggan end 
+// hapus planggan start
+	function Hapus_data_pelanggan($id){
+		mysqli_query($this->koneksi,"delete from tb_pelanggan where Id_pelanggan ='$id'");
+	}
+// hapus planggan start
+
+   // class edit data pelanggan  
+   function Edit_data_pelanggan($id){
+	   $data = mysqli_query($this->koneksi,"select * from tb_pelanggan where Id_pelanggan ='$id'");
+	   while($d = mysqli_fetch_array($data)){
+		   $hasil[] = $d;
+		}
+		return $hasil;
+	}
+	// class edit data pelanggan  end 
+
+// proses update data pelanggan start
+function Update_data_pelanggan($id,$nama, $alamat, $no_tlpn){
+	mysqli_query($this->koneksi,"update tb_pelanggan set nama='$nama', alamat='$alamat', no_hp='$no_tlpn' where Id_pelanggan='$id'");
+}
+// proses update data pelanggan end
 
 	    // clas tampil data layanan
 		function Data_layanan()
@@ -148,3 +174,39 @@ class database{
 ?>
 
 <link rel="stylesheet" href="./asset/css/bootstrap.min.css">
+<link rel="icon" href="images/fevicon.png" type="image/png" />
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="./asset/css/bootstrap.min.css" />
+      <!-- site css -->
+      <link rel="stylesheet" href="style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="./asset/css/responsive.css" />
+      <!-- color css -->
+      <link rel="stylesheet" href="./asset/css/colors.css" />
+      <!-- select bootstrap -->
+      <link rel="stylesheet" href="./asset/css/bootstrap-select.css" />
+      <!-- scrollbar css -->
+      <link rel="stylesheet" href="./asset/css/perfect-scrollbar.css" />
+      <!-- custom css -->
+      <link rel="stylesheet" href="./asset/css/custom.css" />
+      <!-- calendar file css -->
+      <link rel="stylesheet" href="./asset/js/semantic.min.css" />
+
+
+
+
+	        <!-- jQuery -->
+	<script src="./asset/js/jquery.min.js"></script>
+    <script src="./asset/js/popper.min.js"></script>
+      <script src="./asset/js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="./asset/js/animate.js"></script>
+      <!-- select country -->
+      <script src="./asset/js/bootstrap-select.js"></script>
+      <!-- nice scrollbar -->
+      <script src="./asset/js/perfect-scrollbar.min.js"></script>
+      <script>
+         var ps = new PerfectScrollbar('#sidebar');
+      </script>
+      <!-- custom js -->
+      <script src="./asset/js/custom.js"></script>
