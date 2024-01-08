@@ -101,8 +101,9 @@ class database{
 	function Update_data_service($id,$nama_perangkat,$model,$tanggal_masuk,$deskripsi){
 		mysqli_query($this->koneksi,"update tb_service set nama_perangkat='$nama_perangkat', model='$model', tanggal_masuk='$tanggal_masuk',deskripsi='$deskripsi' where id_service='$id'");
 	}
+	// Data_teknisi
 
-    //     // clas tampil pelanggan start
+    // clas tampil pelanggan start
 	function Data_Pelanggan(){
 		$data = mysqli_query($this->koneksi,"select * from tb_pelanggan");
 		while($row = mysqli_fetch_array($data)){
@@ -137,7 +138,45 @@ function Update_data_pelanggan($id,$nama, $alamat, $no_tlpn){
 }
 // proses update data pelanggan end
 
-	    // clas tampil data layanan
+	// clas tampil teknisi start
+	function Data_teknisi(){
+		$data = mysqli_query($this->koneksi,"select * from tb_teknisi");
+		while($row = mysqli_fetch_array($data)){
+			$hasil[] = $row;
+		}
+		return $hasil;
+		// tampil end 
+	}
+// tambah teknisi start
+	function Input_data_teknisi($nama, $alamat,$spesialis, $no_tlpn){
+		mysqli_query($this->koneksi,"insert into tb_teknisi values ('','$nama','$alamat','$spesialis','$no_tlpn')");
+	}
+// tambah pelanggan end 
+
+// hapus teknisi  start
+	function Hapus_data_teknisi($id){
+		mysqli_query($this->koneksi,"delete from tb_teknisi where id_teknisi ='$id'");
+	}
+
+// hapus teknisi  end
+
+   // class edit data teknisi   
+   function Edit_data_teknisi($id){
+	   $data = mysqli_query($this->koneksi,"select * from tb_teknisi where id_teknisi ='$id'");
+	   while($d = mysqli_fetch_array($data)){
+		   $hasil[] = $d;
+		}
+		return $hasil;
+	}
+	// class edit data teknisi   end 
+
+	// proses update data pelanggan start
+	function Update_data_teknisi($id,$nama, $alamat,$spesialis, $no_tlpn){
+		mysqli_query($this->koneksi,"update tb_teknisi set nama='$nama', alamat='$alamat',spesialis='$spesialis', no_hp='$no_tlpn' where id_teknisi='$id'");
+	}
+	// proses update data pelanggan end
+	    
+	// clas tampil data layanan
 		function Data_layanan()
 		{
 			$data = mysqli_query($this->koneksi,"select * from tb_layanan");

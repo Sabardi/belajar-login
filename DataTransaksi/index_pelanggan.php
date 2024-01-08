@@ -1,7 +1,7 @@
 <?php
 include "../database.php";
 $database = new Database();
-$data_service = $database->Data_teknisi();
+$data_service = $database->Data_Pelanggan();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,15 +12,14 @@ $data_service = $database->Data_teknisi();
 </head>
 <body>
     <center>
-        <h1>DATA TEKNISI</h1>
+        <h1>DATA PELANGGAN</h1>
 
-        <a href="AddData.php">Tambah data teknisi</a>
+        <a href="AddData.php">Tambah data pelanggan</a>
         <table border="1">
             <tr>
                 <th>No</th>
                 <th>Nama</th>
                 <th>alamat</th>
-                <th>spesialis</th>
                 <th>no telpon</th>
                 <th>aksi</th>
             </tr>
@@ -34,11 +33,10 @@ $data_service = $database->Data_teknisi();
                 <td><?= $no++?></td>
                 <td><?= $data['nama']?></td>
                 <td><?= $data['alamat']?></td>
-                <td><?= $data['spesialis']?></td>
                 <td><?= $data['no_hp']?></td>
                 <td>
-                    <a href="edit.php?id_teknisi=<?= $data['id_teknisi']; ?>&aksi=edit">Edit</a>
-                    <a href="proses.php?id_teknisi=<?= $data['id_teknisi']; ?>&aksi=hapus"
+                    <a href="edit.php?Id_pelanggan=<?= $data['Id_pelanggan']; ?>&aksi=edit">Edit</a>
+                    <a href="proses.php?Id_pelanggan=<?= $data['Id_pelanggan']; ?>&aksi=hapus"
                     onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</a>
                 </td>
             </tr>
