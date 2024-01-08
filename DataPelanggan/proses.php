@@ -4,7 +4,7 @@ $database = new database();
 
 $aksi = $_GET["aksi"];
 if($aksi == "tambah"){
-    $database->Input_data_pelanggan($_POST['nama'],$_POST['model'],$_POST['alamat'],$_POST['no_hp']);
+    $database->Input_data_pelanggan($_POST['nama'],$_POST['alamat'],$_POST['no_hp']);
     header('location:index_pelanggan.php');
 }elseif($aksi == "hapus"){ 	
     $database->Hapus_data_pelanggan($_GET['Id_pelanggan']);

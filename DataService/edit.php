@@ -53,7 +53,8 @@ $database = new database();
                     <td><span>Deskripsi</span></td>
                     <td>:</td>
                     <td>
-                        <input type="text"name="deskripsi" id="deskripsi" value="<?php echo $data['deskripsi'] ?>">
+                        <textarea  name="deskripsi" id="deskripsi" value="<?php echo $data['deskripsi'] ?>" cols="30" rows="10"></textarea>
+                        <!-- <input type="text" name="deskripsi" id="deskripsi" value="<?php echo $data['deskripsi'] ?>"> -->
                     </td>
                 </tr>
                 <tr>

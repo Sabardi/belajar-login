@@ -25,7 +25,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><label for="no-hp">No telpon</label></td>
+                    <td><label for="no_hp">No telpon</label></td>
                     <td>:</td>
                     <td>
                         <input type="text" name="no_hp" id="no_hp">

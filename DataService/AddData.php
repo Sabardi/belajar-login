@@ -40,7 +40,8 @@
                     <td><span>Deskripsi</span></td>
                     <td>:</td>
                     <td>
-                        <input type="text"name="deskripsi" id="deskripsi">
+                        <textarea name="deskripsi" id="deskripsi" cols="30" rows="10"></textarea>
+                        <!-- <input type="text"name="deskripsi" id="deskripsi"> -->
                     </td>
                 </tr>
                 <tr>

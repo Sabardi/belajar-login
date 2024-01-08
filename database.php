@@ -103,8 +103,7 @@ class database{
 	}
 
     //     // clas tampil pelanggan start
-	function Data_Pelanggan()
-	{
+	function Data_Pelanggan(){
 		$data = mysqli_query($this->koneksi,"select * from tb_pelanggan");
 		while($row = mysqli_fetch_array($data)){
 			$hasil[] = $row;
