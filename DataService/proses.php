@@ -12,6 +12,5 @@ if($aksi == "tambah"){
 }elseif($aksi == "update"){
     $database->Update_data_service($_POST['id_service'],$_POST['nama_perangkat'],$_POST['model'],$_POST['tanggal_masuk'],$_POST['deskripsi']);
     header('location:DataService.php');
-
 }
 ?>

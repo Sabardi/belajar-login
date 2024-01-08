@@ -19,6 +19,7 @@ $data_service = $database->Data_Layanan();
         <table border="1">
             <tr>
                 <th>Nama layanan</th>
+                <th>Aksi</th>
             </tr>
 
             <?php
@@ -28,12 +29,17 @@ $data_service = $database->Data_Layanan();
             ?>
             <tr>
                 <td><?= $data['nama_layanan']?></td>
+                <td>
+                    <a href="edit.php">Edit</a>
+                    <a href="proses.php?id_layanan=<?php echo $data['id_layanan'];?>&aksi=hapus" 
+                    onclick="return confirm('Anda yakin ingin menghapus data ini?')">hapus</a>
+                </td>
             </tr>
+
             <?php
             }
             ?>
         </table>
-
         <br>
     <button><a href="../index.php">kembali ke dashbord</a></button>
 

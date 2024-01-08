@@ -1,5 +1,5 @@
 <?php
-include "../database.php";
+include "../DatabasePelanggan.php";
 $database = new Database();
 $data_service = $database->Data_Pelanggan();
 ?>
@@ -35,9 +35,10 @@ $data_service = $database->Data_Pelanggan();
                 <td><?= $data['alamat']?></td>
                 <td><?= $data['no_hp']?></td>
                 <td>
-                <a href="edit.php?Id_pelanggan=<?= $data['Id_pelanggan']; ?>&aksi=edit">Edit</a>
-                <a href="proses.php?Id_pelanggan=<?= $data['Id_pelanggan']; ?>&aksi=hapus"
-            	onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</a>
+                    <a href="edit.php?Id_pelanggan=<?= $data['Id_pelanggan']; ?>&aksi=edit">Edit</a>
+                    <a href="proses.php?Id_pelanggan=<?= $data['Id_pelanggan']; ?>&aksi=hapus"
+                    onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</a>
+                </td>
             </tr>
             <?php
             }

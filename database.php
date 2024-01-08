@@ -13,6 +13,65 @@ class database{
 		}
 	}
 
+	// class login dan log out start 
+
+	function login($username, $password) {
+        $login = $this->koneksi->query("SELECT * FROM user WHERE username='$username' AND password='$password'");
+        $cek = $login->num_rows;
+
+        if ($cek > 0) {
+            $data = $login->fetch_assoc();
+			// admin
+            if ($data['level'] == "admin") {
+                $this->setSession($username, "admin");
+                header("location:index-admin.php");
+            } elseif ($data['level'] == "member") {
+                $this->setSession($username, "member");
+                header("location:index-member.php");
+            // } elseif ($data['level'] == "resepsionis") {
+            //     $this->setSession($username, "resepsionis");
+            //     header("location:index-resepsionis.php");
+            }elseif ($data['level'] == "pimpinan") {
+                $this->setSession($username, "pimpinan");
+                header("location:index-superadmin.php"); 
+			}else {
+                header("location:index.php?pesan=gagal");
+            }
+        } else {
+            header("location:index.php?pesan=gagal");
+        }
+    }
+
+	    // class edit data service  
+		function loginsebagai($id){
+			$data = mysqli_query($this->koneksi,"select * from user where id_service='$id'");
+			while($d = mysqli_fetch_array($data)){
+				$hasil[] = $d;
+			}
+			return $hasil;
+		}
+
+    function logout() {
+        // session_start();
+        session_destroy();
+        header("location:index.php");
+    }
+
+    function setSession($username, $level) {
+        session_start();
+        $_SESSION['username'] = $username;
+        $_SESSION['level'] = $level;
+    }
+
+    function register($username, $password, $email, $level) {
+        // $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $query = "INSERT INTO user (username, password, email, level) VALUES ('$username', '$password', '$email', '$level')";
+        return $this->koneksi->query($query);
+    }
+
+	// login dan log out end
+	
+
     // clas tampil data service
 	function Data_service()
 	{
@@ -53,6 +112,37 @@ class database{
 		return $hasil;
 	}
 
+	    // clas tampil data layanan
+		function Data_layanan()
+		{
+			$data = mysqli_query($this->koneksi,"select * from tb_layanan");
+			while($row = mysqli_fetch_array($data)){
+				$hasil[] = $row;
+			}
+			return $hasil;
+		}
+		function Tambah_layanan($Layanan){
+			mysqli_query($this->koneksi,"insert into tb_layanan values ('','$Layanan')");
+		}
+
+
+		// class hapus data layanan
+		function Hapus_layanan($id){
+			mysqli_query($this->koneksi,"delete from tb_layanan where id_layanan='$id'");
+		}
+
+		// class update layananan
+		function Edit_layanan($id){
+			$data = mysqli_query($this->koneksi,"select from tb_layanan where id_layanan='$id");
+			while($d = mysqli_fetch_array($data)){
+				$hasil[]=$d;
+			}
+			return $hasil;
+		}
+		// class update layananan
+		function Update_layanan(){
+			
+		}
 }
 
 ?>

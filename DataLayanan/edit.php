@@ -7,20 +7,22 @@
 </head>
 <body>
     <center>
-        <h1>Tambah layanan service anda </h1>
+        <h1>Silahkan tambah layanan anda</h1>
         <form action="proses.php?aksi=tambah" method="post">
             <table>
                 <tr>
-                    <td><span>Nama layanan</span></td>
+                    <td><span>Nama Layana</span></td>
                     <td>:</td>
-                    <td><input type="text" name="nama_layanan" id="nama_layanan"></td>
+                    <td>
+                        <input type="text"name="nama_layanan" id="nama_layanan">
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>
                     <button type="submit">simpan</button>
-                    <button><a href="DataService.php">Batal</a></button>
+                    <button><a href="dt.php">Batal</a></button>
                     </td>
                 </tr>
             </table>
