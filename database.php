@@ -173,40 +173,48 @@ function Update_data_pelanggan($id,$nama, $alamat, $no_tlpn){
 
 ?>
 
-<link rel="stylesheet" href="./asset/css/bootstrap.min.css">
-<link rel="icon" href="images/fevicon.png" type="image/png" />
+<!-- <link rel="stylesheet" href="./asset/css/bootstrap.min.css"> -->
+<link rel="icon" href="asset/images/fevicon.png" type="image/png" />
       <!-- bootstrap css -->
-      <link rel="stylesheet" href="./asset/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="asset/css/bootstrap.min.css" />
       <!-- site css -->
       <link rel="stylesheet" href="style.css" />
       <!-- responsive css -->
-      <link rel="stylesheet" href="./asset/css/responsive.css" />
+      <link rel="stylesheet" href="asset/css/responsive.css" />
       <!-- color css -->
-      <link rel="stylesheet" href="./asset/css/colors.css" />
+      <link rel="stylesheet" href="asset/css/colors.css" />
       <!-- select bootstrap -->
-      <link rel="stylesheet" href="./asset/css/bootstrap-select.css" />
+      <link rel="stylesheet" href="asset/css/bootstrap-select.css" />
       <!-- scrollbar css -->
-      <link rel="stylesheet" href="./asset/css/perfect-scrollbar.css" />
+      <link rel="stylesheet" href="asset/css/perfect-scrollbar.css" />
       <!-- custom css -->
-      <link rel="stylesheet" href="./asset/css/custom.css" />
+      <link rel="stylesheet" href="asset/css/custom.css" />
       <!-- calendar file css -->
-      <link rel="stylesheet" href="./asset/js/semantic.min.css" />
+      <link rel="stylesheet" href="asset/js/semantic.min.css" />
 
 
 
 
 	        <!-- jQuery -->
-	<script src="./asset/js/jquery.min.js"></script>
-    <script src="./asset/js/popper.min.js"></script>
-      <script src="./asset/js/bootstrap.min.js"></script>
+	<script src="asset/js/jquery.min.js"></script>
+    <script src="asset/js/popper.min.js"></script>
+      <script src="asset/js/bootstrap.min.js"></script>
       <!-- wow animation -->
-      <script src="./asset/js/animate.js"></script>
+      <script src="asset/js/animate.js"></script>
       <!-- select country -->
-      <script src="./asset/js/bootstrap-select.js"></script>
+      <script src="asset/js/bootstrap-select.js"></script>
       <!-- nice scrollbar -->
-      <script src="./asset/js/perfect-scrollbar.min.js"></script>
+      <script src="asset/js/perfect-scrollbar.min.js"></script>
       <script>
          var ps = new PerfectScrollbar('#sidebar');
       </script>
       <!-- custom js -->
-      <script src="./asset/js/custom.js"></script>
+      <script src="asset/js/custom.js"></script>
+      <!-- owl carousel -->
+      <script src="asset/js/owl.carousel.js"></script> 
+      <!-- chart js -->
+      <script src="asset/js/Chart.min.js"></script>
+      <script src="asset/js/Chart.bundle.min.js"></script>
+      <script src="asset/js/utils.js"></script>
+      <script src="asset/js/analyser.js"></script>
+      <script src="asset/js/chart_custom_style1.js"></script>
