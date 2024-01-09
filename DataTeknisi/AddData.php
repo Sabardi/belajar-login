@@ -11,10 +11,10 @@
         <form action="proses.php?aksi=tambah" method="post">
             <table>
                 <tr>
-                    <td><label for="nama">Nama</label></td>
+                    <td><label for="nama_teknisi">Nama</label></td>
                     <td>:</td>
                     <td>
-                        <input type="text" name="nama" id="nama">
+                        <input type="text" name="nama_teknisi" id="nama_teknisi">
                     </td>
                 </tr>
                 <tr>

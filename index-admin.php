@@ -30,7 +30,7 @@
         </ul>
         <ul>
             <li>
-            <a href="#">Transaksi</a>
+            <a href="./DataTransaksi/Data_transaksi.php">Transaksi</a>
             </li>
         </ul>
         <ul>

@@ -111,11 +111,14 @@ class database{
 		}
 		return $hasil;
 	}
+	// tampil data end
+
 // tambah pelanggan start
 	function Input_data_pelanggan($nama, $alamat, $no_tlpn){
 		mysqli_query($this->koneksi,"insert into tb_pelanggan values ('','$nama','$alamat','$no_tlpn')");
 	}
 // tambah pelanggan end 
+
 // hapus planggan start
 	function Hapus_data_pelanggan($id){
 		mysqli_query($this->koneksi,"delete from tb_pelanggan where Id_pelanggan ='$id'");
@@ -145,13 +148,13 @@ function Update_data_pelanggan($id,$nama, $alamat, $no_tlpn){
 			$hasil[] = $row;
 		}
 		return $hasil;
-		// tampil end 
+		// tampil teknisi end 
 	}
 // tambah teknisi start
 	function Input_data_teknisi($nama, $alamat,$spesialis, $no_tlpn){
 		mysqli_query($this->koneksi,"insert into tb_teknisi values ('','$nama','$alamat','$spesialis','$no_tlpn')");
 	}
-// tambah pelanggan end 
+// tambah teknisi end 
 
 // hapus teknisi  start
 	function Hapus_data_teknisi($id){
@@ -170,11 +173,11 @@ function Update_data_pelanggan($id,$nama, $alamat, $no_tlpn){
 	}
 	// class edit data teknisi   end 
 
-	// proses update data pelanggan start
+	// proses update data teknisi start
 	function Update_data_teknisi($id,$nama, $alamat,$spesialis, $no_tlpn){
-		mysqli_query($this->koneksi,"update tb_teknisi set nama='$nama', alamat='$alamat',spesialis='$spesialis', no_hp='$no_tlpn' where id_teknisi='$id'");
+		mysqli_query($this->koneksi,"update tb_teknisi set nama_teknisi='$nama', alamat='$alamat',spesialis='$spesialis', no_hp='$no_tlpn' where id_teknisi='$id'");
 	}
-	// proses update data pelanggan end
+	// proses update data teknisi end
 	    
 	// clas tampil data layanan
 		function Data_layanan()
@@ -207,6 +210,44 @@ function Update_data_pelanggan($id,$nama, $alamat, $no_tlpn){
 		function Update_layanan(){
 			
 		}
+// clas tampil teknisi start
+function Data_transaksi(){
+	$data = mysqli_query($this->koneksi,"select * from tb_pelanggan,tb_service,	tb_teknisi,tb_transakaksi_service");
+	while($row = mysqli_fetch_array($data)){
+		$hasil[] = $row;
+	}
+	return $hasil;
+	// tampil teknisi end 
+}
+// tambah teknisi start
+function Input_data_transaksi($nama, $alamat,$spesialis, $no_tlpn){
+	mysqli_query($this->koneksi,"insert into tb_teknisi values ('','$nama','$alamat','$spesialis','$no_tlpn')");
+}
+// tambah teknisi end 
+
+// hapus teknisi  start
+function Hapus_data_transaksi($id){
+	mysqli_query($this->koneksi,"delete from tb_teknisi where id_teknisi ='$id'");
+}
+
+// hapus teknisi  end
+
+// class edit data teknisi   
+function Edit_data_transaksi($id){
+   $data = mysqli_query($this->koneksi,"select * from tb_teknisi where id_teknisi ='$id'");
+   while($d = mysqli_fetch_array($data)){
+	   $hasil[] = $d;
+	}
+	return $hasil;
+}
+// class edit data teknisi   end 
+
+// proses update data teknisi start
+function Update_data_transaksi($id,$nama, $alamat,$spesialis, $no_tlpn){
+	mysqli_query($this->koneksi,"update tb_teknisi set nama='$nama', alamat='$alamat',spesialis='$spesialis', no_hp='$no_tlpn' where id_teknisi='$id'");
+}
+// proses update data teknisi end
+
 }
 
 ?>

@@ -32,7 +32,7 @@ $data_service = $database->Data_teknisi();
             ?>
             <tr>
                 <td><?= $no++?></td>
-                <td><?= $data['nama']?></td>
+                <td><?= $data['nama_teknisi']?></td>
                 <td><?= $data['alamat']?></td>
                 <td><?= $data['spesialis']?></td>
                 <td><?= $data['no_hp']?></td>

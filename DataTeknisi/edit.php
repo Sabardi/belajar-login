@@ -28,7 +28,7 @@ $database = new database();
                     <td><label for="nama">Nama</label></td>
                     <td>:</td>
                     <td>
-                        <input type="text" name="nama" id="nama" value="<?php echo $data['nama']; ?>">
+                        <input type="text" name="nama_teknisi" id="nama_teknisi" value="<?php echo $data['nama_teknisi']; ?>">
                     </td>
                 </tr>
                 <tr>
