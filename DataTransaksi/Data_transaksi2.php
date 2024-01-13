@@ -1,5 +1,5 @@
 <?php
-include "../database.php";
+include "../database1.php";
 $database = new Database();
 $data_service = $database->Data_transaksi();
 ?>
@@ -17,18 +17,28 @@ $data_service = $database->Data_transaksi();
         <!-- <a href="AddData.php">Tambah data transaksi</a> -->
         <table border="1">
             <tr>
+                <!-- berisi tabel pelanggan start -->
                 <th>No</th>
-                <th>Nama</th> 
+                <th>nama</th>
                 <th>alamat</th>
-                <th>no telpon</th>
+                <th>nomer telpon</th>
+                <!-- tabel pelanggan end  -->
+
+                <!-- tabel service start -->
                 <th>nama perangkat</th>
                 <th>model</th>
                 <th>tanggal masuk</th>
                 <th>deskripsi</th>
+                <!-- end  -->
+
+                <!-- tabel teknisi start -->
                 <th>nama teknisi</th>
+                <!-- end  -->
+
                 <th>status pembayaran</th>
-                <th>total biaya</th>
-                <th>di proses oleh</th>
+                <th>tanggal transaksi</th>
+                <!-- <th>total biaya</th> -->
+
                 <th>aksi</th>
             </tr>
 
@@ -39,17 +49,24 @@ $data_service = $database->Data_transaksi();
             ?>
             <tr>
                 <td><?= $no++?></td>
+                <!-- tabel pelanggan  -->
                 <td><?= $data['nama']?></td>
                 <td><?= $data['alamat']?></td>
                 <td><?= $data['no_hp']?></td>
+                <!-- end  -->
+
+                <!-- tabel service start -->
                 <td><?= $data['nama_perangkat']?></td>
                 <td><?= $data['model']?></td>
                 <td><?= $data['tanggal_masuk']?></td>
-                <td><?= $data['deskripsi']?></td>
+                <!-- end  -->
+
+                <!-- table teknisi start  -->
                 <td><?= $data['nama_teknisi']?></td>
+
                 <td><?= $data['status_transaksi']?></td>
-                <td><?= $data['total_biaya']?></td>
-                <td><?= $data['di_proses_oleh']?></td>
+                <td><?= $data['tanggal_transaksi']?></td>
+                <!-- <td><?= $data['id_pembayaran']?></td> -->
                 <td>
                     <a href="edit.php?Id_pelanggan=<?= $data['Id_pelanggan']; ?>&aksi=edit">Edit</a>
                     <a href="proses.php?Id_pelanggan=<?= $data['Id_pelanggan']; ?>&aksi=hapus"

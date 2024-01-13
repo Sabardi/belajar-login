@@ -218,20 +218,39 @@ function Update_data_pelanggan($id,$nama, $alamat, $no_tlpn){
 			tb_service.nama_perangkat,tb_service.model,tb_service.tanggal_masuk, tb_service.deskripsi,
 			tb_teknisi.nama_teknisi,
 			tb_trasaksi.status_transaksi,
-			tb_trasaksi.tanggal_transaksi 
-			FROM tb_trasaksi 
-			INNER JOIN tb_pelanggan ON tb_trasaksi.id_transaksi=tb_pelanggan.Id_pelanggan
-			INNER JOIN tb_service ON tb_trasaksi.id_transaksi=tb_service.id_service 
-			INNER JOIN tb_teknisi ON tb_trasaksi.id_transaksi=tb_teknisi.id_teknisi;");
+			tb_trasaksi.di_proses_oleh,
+			tb_trasaksi.total_biaya,
+			tb_trasaksi.tanggal_transaksi
+			FROM tb_trasaksi
+			LEFT JOIN tb_pelanggan ON tb_trasaksi.id_transaksi=tb_pelanggan.Id_pelanggan
+			LEFT JOIN tb_service ON tb_trasaksi.id_transaksi=tb_service.id_service
+			LEFT JOIN tb_teknisi ON tb_trasaksi.id_transaksi=tb_teknisi.id_teknisi;");
 			while($row = mysqli_fetch_array($data)){
 				$hasil[] = $row;
 			}
 			return $hasil;
 			// tampil teknisi end 
 		}
+		// // tabel transaksi 
+		// function Data_transaksi(){
+		// 	$data = mysqli_query($this->koneksi,
+		// 	"SELECT tb_trasaksi.id_transaksi,tb_pelanggan.Id_pelanggan as nama,tb_pelanggan.alamat,tb_pelanggan.no_hp,
+		// 	tb_service.nama_perangkat,tb_service.model,tb_service.tanggal_masuk, tb_service.deskripsi,
+		// 	tb_teknisi.nama_teknisi,
+		// 	tb_trasaksi.status_transaksi,
+		// 	tb_trasaksi.tanggal_transaksi 
+		// 	FROM tb_trasaksi 
+		// 	INNER JOIN tb_pelanggan ON tb_trasaksi.id_transaksi=tb_pelanggan.Id_pelanggan
+		// 	INNER JOIN tb_service ON tb_trasaksi.id_transaksi=tb_service.id_service
+		// 	INNER JOIN tb_teknisi ON tb_trasaksi.id_transaksi=tb_teknisi.id_teknisi;");
+		// 	while($row = mysqli_fetch_array($data)){
+		// 		$hasil[] = $row;
+		// 	}
+		// 	return $hasil;
+		// 	// tampil teknisi end 
+		// }
 
 }
-
 ?>
 
 <!-- <link rel="stylesheet" href="./asset/css/bootstrap.min.css"> -->
