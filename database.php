@@ -4,7 +4,7 @@ class database{
     var $host = "localhost";
 	var $username = "root";
 	var $password = "";
-	var $database = "mycomputer";
+	var $database = "mycomputerv1";
 	var $koneksi = "";
 	function __construct(){
 		$this->koneksi = mysqli_connect($this->host, $this->username, $this->password,$this->database);
@@ -210,43 +210,25 @@ function Update_data_pelanggan($id,$nama, $alamat, $no_tlpn){
 		function Update_layanan(){
 			
 		}
-// clas tampil teknisi start
-function Data_transaksi(){
-	$data = mysqli_query($this->koneksi,"select * from tb_pelanggan,tb_service,	tb_teknisi,tb_transakaksi_service");
-	while($row = mysqli_fetch_array($data)){
-		$hasil[] = $row;
-	}
-	return $hasil;
-	// tampil teknisi end 
-}
-// tambah teknisi start
-function Input_data_transaksi($nama, $alamat,$spesialis, $no_tlpn){
-	mysqli_query($this->koneksi,"insert into tb_teknisi values ('','$nama','$alamat','$spesialis','$no_tlpn')");
-}
-// tambah teknisi end 
 
-// hapus teknisi  start
-function Hapus_data_transaksi($id){
-	mysqli_query($this->koneksi,"delete from tb_teknisi where id_teknisi ='$id'");
-}
-
-// hapus teknisi  end
-
-// class edit data teknisi   
-function Edit_data_transaksi($id){
-   $data = mysqli_query($this->koneksi,"select * from tb_teknisi where id_teknisi ='$id'");
-   while($d = mysqli_fetch_array($data)){
-	   $hasil[] = $d;
-	}
-	return $hasil;
-}
-// class edit data teknisi   end 
-
-// proses update data teknisi start
-function Update_data_transaksi($id,$nama, $alamat,$spesialis, $no_tlpn){
-	mysqli_query($this->koneksi,"update tb_teknisi set nama='$nama', alamat='$alamat',spesialis='$spesialis', no_hp='$no_tlpn' where id_teknisi='$id'");
-}
-// proses update data teknisi end
+		// tabel transaksi 
+		function Data_transaksi(){
+			$data = mysqli_query($this->koneksi,
+			"SELECT tb_trasaksi.id_transaksi,tb_pelanggan.nama,
+			tb_service.id_service,
+			tb_teknisi.id_teknisi,
+			tb_trasaksi.status_transaksi,
+			tb_trasaksi.tanggal_transaksi 
+			FROM tb_trasaksi 
+			INNER JOIN tb_pelanggan ON tb_trasaksi.id_transaksi=tb_pelanggan.Id_pelanggan
+			INNER JOIN tb_service ON tb_trasaksi.id_transaksi=tb_service.id_service 
+			INNER JOIN tb_teknisi ON tb_trasaksi.id_transaksi=tb_teknisi.id_teknisi;");
+			while($row = mysqli_fetch_array($data)){
+				$hasil[] = $row;
+			}
+			return $hasil;
+			// tampil teknisi end 
+		}
 
 }
 

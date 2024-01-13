@@ -87,12 +87,12 @@ CREATE TABLE `tb_service` (
 --
 
 INSERT INTO `tb_service` (`id_service`, `nama_perangkat`, `model`, `tanggal_masuk`, `deskripsi`) VALUES
-(6, 'laptop', 'hshsh', '2024-01-06', 'k'),
-(7, 'pembagian', 'iwiwi', '2024-01-06', 'sds'),
-(9, 'komputer', 'hersa', '0030-08-24', 'rusak di injek raksasa'),
-(10, 'komputer', 'hshsh', '2024-01-06', 'sdsds'),
-(11, 'pembagian', 'JSJSJ', '2024-01-06', 'saass'),
-(12, 'laptop', 'JSJ22SJ', '2024-01-09', '222');
+(1, 'laptop', 'hshsh', '2024-01-06', 'k'),
+(2, 'pembagian', 'iwiwi', '2024-01-06', 'sds'),
+(3, 'komputer', 'hersa', '0030-08-24', 'rusak di injek raksasa'),
+(4, 'komputer', 'hshsh', '2024-01-06', 'sdsds'),
+(5, 'pembagian', 'JSJSJ', '2024-01-06', 'saass'),
+(6, 'laptop', 'JSJ22SJ', '2024-01-09', '222');
 
 -- --------------------------------------------------------
 
