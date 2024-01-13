@@ -1,6 +1,6 @@
 <?php
-include "../database1.php";
-$database = new Database();
+include "../percobaan.php";
+$database = new database();
 $data_service = $database->Data_transaksi();
 ?>
 <!DOCTYPE html>
@@ -17,13 +17,8 @@ $data_service = $database->Data_transaksi();
         <!-- <a href="AddData.php">Tambah data transaksi</a> -->
         <table border="1">
             <tr>
-                <th>No</th>
-                <th>id pelanggan</th>
-                <th>id service</th>
-                <th>id teknisi</th>
-                <th>status pembayaran</th>
-                <th>tanggal transaksi</th>
-                <!-- <th>total biaya</th> -->
+                <th>id transakfa-spin</th> 
+                <th>Id pelanggan</th>
                 <th>aksi</th>
             </tr>
 
@@ -33,13 +28,9 @@ $data_service = $database->Data_transaksi();
 
             ?>
             <tr>
-                <td><?= $no++?></td>
-                <td><?= $data['nama']?></td>
-                <td><?= $data['id_service']?></td>
-                <td><?= $data['id_teknisi']?></td>
-                <td><?= $data['status_transaksi']?></td>
-                <td><?= $data['tanggal_transaksi']?></td>
-                <!-- <td><?= $data['id_pembayaran']?></td> -->
+                <td><?= $data['id_transaksi']?></td>
+                <td><?= $data['Id_pelanggan']?></td>
+
                 <td>
                     <a href="edit.php?Id_pelanggan=<?= $data['Id_pelanggan']; ?>&aksi=edit">Edit</a>
                     <a href="proses.php?Id_pelanggan=<?= $data['Id_pelanggan']; ?>&aksi=hapus"

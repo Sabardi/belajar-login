@@ -84,25 +84,39 @@ class database{
     //     FROM transaksi 
     //     INNER JOIN barang ON transaksi.id_barang = barang.id_barang";
 
-// clas tampil teknisi start
-function Data_transaksi(){
-	$data = mysqli_query($this->koneksi,
-    "SELECT tb_trasaksi.id_transaksi,
-    tb_pelanggan.nama,
-    tb_service.id_service,
-    tb_teknisi.id_teknisi,
-    tb_trasaksi.status_transaksi,
-    tb_trasaksi.tanggal_transaksi 
-    FROM tb_trasaksi 
-    INNER JOIN tb_pelanggan ON tb_trasaksi.id_transaksi=tb_pelanggan.Id_pelanggan
-    INNER JOIN tb_service ON tb_trasaksi.id_transaksi=tb_service.id_service 
-    INNER JOIN tb_teknisi ON tb_trasaksi.id_transaksi=tb_teknisi.id_teknisi;");
-	while($row = mysqli_fetch_array($data)){
-		$hasil[] = $row;
-	}
-	return $hasil;
-	// tampil teknisi end 
-}
+// clas tampil transaksi start
+// function Data_transaksi(){
+// 	$data = mysqli_query($this->koneksi,
+//     "SELECT * fromtb_trasaksi.id_transaksi,
+//     tb_pelanggan.Id_pelanggan,
+//     tb_service.id_service,
+//     tb_teknisi.id_teknisi,
+//     tb_trasaksi.status_transaksi,
+//     tb_trasaksi.tanggal_transaksi 
+//     FROM tb_trasaksi 
+//     INNER JOIN tb_pelanggan ON tb_trasaksi.id_transaksi=tb_pelanggan.Id_pelanggan
+//     INNER JOIN tb_service ON tb_trasaksi.id_transaksi=tb_service.id_service 
+//     INNER JOIN tb_teknisi ON tb_trasaksi.id_transaksi=tb_teknisi.id_teknisi;");
+// 	while($row = $data->fetch_assoc()){
+// 		$hasil[] = $row;
+// 	}
+// 	return $hasil;
+// 	// tampil transaksi end 
+// }
+
+// function Data_transaksi(){
+// 	$data = mysqli_query($this->koneksi,"SELECT * from tb_trasaksi,tb_pelanggan where tb_trasaksi.id_pelanggan=tb_pelanggan.Id_pelanggan");
+//     // tb_pelanggan.Id_pelanggan, 
+//     // FROM tb_trasaksi 
+//     // INNER JOIN tb_pelanggan ON tb_trasaksi.id_transaksi=tb_pelanggan.Id_pelanggan
+//     // INNER JOIN tb_service ON tb_trasaksi.id_transaksi=tb_service.id_service 
+//     // INNER JOIN tb_teknisi ON tb_trasaksi.id_transaksi=tb_teknisi.id_teknisi;");
+// 	while($row = $data->fetch_assoc()){
+// 		$hasil[] = $row;
+// 	}
+// 	return $hasil;
+// 	// tampil transaksi end 
+// }
 // function Data_transaksi(){
 // 	$data = mysqli_query($this->koneksi,"select from tb_pelanggan,tb_service,	tb_teknisi,tb_transakaksi_service");
 // 	while($row = mysqli_fetch_array($data)){

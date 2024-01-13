@@ -214,9 +214,9 @@ function Update_data_pelanggan($id,$nama, $alamat, $no_tlpn){
 		// tabel transaksi 
 		function Data_transaksi(){
 			$data = mysqli_query($this->koneksi,
-			"SELECT tb_trasaksi.id_transaksi,tb_pelanggan.nama,
-			tb_service.id_service,
-			tb_teknisi.id_teknisi,
+			"SELECT tb_trasaksi.id_transaksi,tb_pelanggan.nama,tb_pelanggan.alamat,tb_pelanggan.no_hp,
+			tb_service.nama_perangkat,tb_service.model,tb_service.tanggal_masuk, tb_service.deskripsi,
+			tb_teknisi.nama_teknisi,
 			tb_trasaksi.status_transaksi,
 			tb_trasaksi.tanggal_transaksi 
 			FROM tb_trasaksi 
