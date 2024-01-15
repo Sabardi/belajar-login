@@ -253,48 +253,47 @@ function Update_data_pelanggan($id,$nama, $alamat, $no_tlpn){
 }
 ?>
 
-<!-- <link rel="stylesheet" href="./asset/css/bootstrap.min.css"> -->
-<link rel="icon" href="asset/images/fevicon.png" type="image/png" />
-      <!-- bootstrap css -->
-      <link rel="stylesheet" href="asset/css/bootstrap.min.css" />
-      <!-- site css -->
-      <link rel="stylesheet" href="style.css" />
-      <!-- responsive css -->
-      <link rel="stylesheet" href="asset/css/responsive.css" />
-      <!-- color css -->
-      <link rel="stylesheet" href="asset/css/colors.css" />
-      <!-- select bootstrap -->
-      <link rel="stylesheet" href="asset/css/bootstrap-select.css" />
-      <!-- scrollbar css -->
-      <link rel="stylesheet" href="asset/css/perfect-scrollbar.css" />
-      <!-- custom css -->
-      <link rel="stylesheet" href="asset/css/custom.css" />
-      <!-- calendar file css -->
-      <link rel="stylesheet" href="asset/js/semantic.min.css" />
+<head>
+    <meta charset="utf-8">
+    <title>Service komputer</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="asset/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="asset/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
+    <link href="asset/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="asset/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="asset/css/style.css" rel="stylesheet">
 
 
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/lib/chart/chart.min.js"></script>
+    <script src="asset/lib/easing/easing.min.js"></script>
+    <script src="asset/lib/waypoints/waypoints.min.js"></script>
+    <script src="asset/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="asset/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="asset/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="asset/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-
-	        <!-- jQuery -->
-	<script src="asset/js/jquery.min.js"></script>
-    <script src="asset/js/popper.min.js"></script>
-      <script src="asset/js/bootstrap.min.js"></script>
-      <!-- wow animation -->
-      <script src="asset/js/animate.js"></script>
-      <!-- select country -->
-      <script src="asset/js/bootstrap-select.js"></script>
-      <!-- nice scrollbar -->
-      <script src="asset/js/perfect-scrollbar.min.js"></script>
-      <script>
-         var ps = new PerfectScrollbar('#sidebar');
-      </script>
-      <!-- custom js -->
-      <script src="asset/js/custom.js"></script>
-      <!-- owl carousel -->
-      <script src="asset/js/owl.carousel.js"></script> 
-      <!-- chart js -->
-      <script src="asset/js/Chart.min.js"></script>
-      <script src="asset/js/Chart.bundle.min.js"></script>
-      <script src="asset/js/utils.js"></script>
-      <script src="asset/js/analyser.js"></script>
-      <script src="asset/js/chart_custom_style1.js"></script>
+    <!-- Template Javascript -->
+    <script src="asset/js/main.js"></script>
