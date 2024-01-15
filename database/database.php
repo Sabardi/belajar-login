@@ -231,6 +231,23 @@ function Update_data_pelanggan($id,$nama, $alamat, $no_tlpn){
 			return $hasil;
 			// tampil teknisi end 
 		}
+
+		// menampilkan data service di dsahboard
+		// function Tampil_Data_service(){
+		// 	$data = mysqli_query($this->koneksi,
+		// 	"SELECT tb_service.id_service,tb_pelanggan.nama,tb_teknisi.nama_teknisi,
+		// 	tb_service.nama_perangkat,tb_service.tanggal_masuk
+		// 	FROM tb_service
+		// 	LEFT JOIN tb_pelanggan ON tb_service.id_service=tb_pelanggan.Id_pelanggan
+		// 	LEFT JOIN tb_teknisi ON tb_trasaksi.id_transaksi=tb_teknisi.id_teknisi;");
+		// 	while($row = mysqli_fetch_array($data)){
+		// 		$hasil[] = $row;
+		// 	}
+		// 	return $hasil;
+		// 	// tampil teknisi end 
+		// }
+
+		
 		// // tabel transaksi 
 		// function Data_transaksi(){
 		// 	$data = mysqli_query($this->koneksi,

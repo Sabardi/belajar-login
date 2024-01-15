@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "database.php";
+include "database/database.php";
 
 $db = new Database();
 
