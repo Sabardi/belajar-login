@@ -22,9 +22,12 @@ class database{
         if ($cek > 0) {
             $data = $login->fetch_assoc();
 			// admin
+            // if ($data['level'] == "admin") {
+            //     $this->setSession($username, "admin");
+            //     header("location:index-admin.php");
             if ($data['level'] == "admin") {
                 $this->setSession($username, "admin");
-                header("location:index-admin.php");
+                header("location:dashboard.php");
             } elseif ($data['level'] == "member") {
                 $this->setSession($username, "member");
                 header("location:index-member.php");
