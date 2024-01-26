@@ -1,66 +1,77 @@
 <?php
-include "database/database.php";
+include 'database.php';
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Pluto - Responsive Bootstrap Admin Panel Templates</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- site icon -->
- 
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
-   </head>
-   <body class="inner_page login">
-      <div class="full_container">
-         <div class="container">
-            <div class="center verticle_center full_height">
-               <div class="login_section">
-                  <div class="logo_login">
-                     <div class="center">
-                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Selamat Datang Silahkan login terlebih Dahulu</h3></div>
-                        <!-- <div>selamat datang silahkan login</div> -->
-                        <!-- <img width="210" src="asset/images/logo/logo.png" alt="#" /> -->
-                     </div>
-                  </div>
-                  <div class="login_form">
-                     <form action="login.php" method="post">
-                        <fieldset>
-                           <div class="field">
-                              <label class="label_field">username</label>
-                              <input type="text" id="inputname" name="username" placeholder="E-mail" />
-                           </div>
-                           <div class="field">
-                              <label class="label_field">Password</label>
-                              <input type="password" name="password" placeholder="Password" />
-                           </div>
-                           <div class="field">
-                              <label class="label_field hidden">hidden label</label>
-                              <label class="form-check-label"><input type="checkbox" class="form-check-input"> Remember Me</label>
-                              <a class="forgot" href="">Forgotten Password?</a>
-                           </div>
-                           <div class="field margin_0">
-                              <label class="label_field hidden">hidden label</label>
-                              <button class="main_bt">Sing In</button>
-                           </div>
-                        </fieldset>
-                     </form>
-                  </div>
-               </div>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Login</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="bg-primary">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Selamat Datang di Aplikasi Reservasi Komputer</h3></div>
+                                    <div class="card-body">
+                                        <form action="login.php" method="post">
+
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="inputname" type="text" name="username" placeholder="masukkan username" />
+                                                <label for="inputname">Username</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="inputPassword" type="password" name="password" placeholder="Password" />
+                                                <label for="inputPassword">Password</label>
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
+                                                <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                                <a class="small" href="password.html">Forgot Password?</a>
+                                                <!-- <a class="btn btn-primary" type="submit" name="login">Login</a> -->
+                                                <button type="submit" name="login" class="btn btn-primary btn-block">Login</button>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer text-center py-3">
+                                        <div class="small"><a href="register.php">Belum Punya Akun? Daftar!</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
             </div>
-         </div>
-      </div>
-      
-   </body>
+            <div id="layoutAuthentication_footer">
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+    </body>
 </html>

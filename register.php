@@ -1,27 +1,3 @@
-<?php
-include "database.php";
-?>
-
-    <!-- <form action="user.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username" required>
-
-        <label for="password">Password:</label>
-        <input type="password" name="password" required>
-
-        <label for="email">Email:</label>
-        <input type="email" name="email" required>
-
-        <label for="level">Level:</label>
-        <input type="text" name="level" required>
-
-        <button type="submit">Register</button>
-    </form> -->
-
-
-   
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -54,18 +30,24 @@ include "database.php";
                                                 <label for="inputPassword">Password</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="email" type="email" name="email" placeholder="name@example.com" />
-                                                <label for="email">Email address</label>
+                                                <input class="form-control" id="nama_toko" type="text" name="nama_toko" placeholder="masukkan nama toko" />
+                                                <label for="nama_toko">Nama Toko</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                            <select name="level" id="level">
-                                                <option value="admin">admin</option>
-                                                <option value="member">member</option>
-                                                <!-- <option value="">perkalian</option> -->
-                                                <!-- <option value="pembagian">pembagian</option> -->
-                                            </select>
-                                                <!-- <input class="form-control" id="level" type="text" name="level"  placeholder="admin" />
-                                                <label for="level">Level</label> -->
+                                                <input class="form-control" id="email" type="email" name="email" placeholder="name@example.com" />
+                                                <label for="email">Email Toko</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="telepon" type="text" name="telepon" placeholder="" />
+                                                <label for="yelepon">NO. Telepon</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="deskripsi" type="text" name="deskripsi" placeholder="" />
+                                                <label for="yelepon">Deskripsi Toko</label>
+                                            </div>
+                                            <div class="form-floating mb-3">
+                                                <input class="form-control" id="level" type="text" name="level"  placeholder="admin" />
+                                                <label for="level">Level</label>
                                             </div>
                                             
                                             <div class="mt-4 mb-0">
@@ -75,13 +57,27 @@ include "database.php";
                                         </form>
                                     </div>
                                     <div class="card-footer text-center py-3">
-                                        <div class="small"><a href="index.php">Have an account? Go to login</a></div>
+                                        <div class="small"><a href="login.html">Have an account? Go to login</a></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </main>
+            </div>
+            <div id="layoutAuthentication_footer">
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Your Website 2022</div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
