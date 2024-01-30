@@ -1,66 +1,38 @@
 <?php
-include "database/database.php";
+include "database.php";
 ?>
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Pluto - Responsive Bootstrap Admin Panel Templates</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- site icon -->
- 
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-      <![endif]-->
-   </head>
-   <body class="inner_page login">
-      <div class="full_container">
-         <div class="container">
-            <div class="center verticle_center full_height">
-               <div class="login_section">
-                  <div class="logo_login">
-                     <div class="center">
-                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Selamat Datang Silahkan login terlebih Dahulu</h3></div>
-                        <!-- <div>selamat datang silahkan login</div> -->
-                        <!-- <img width="210" src="asset/images/logo/logo.png" alt="#" /> -->
-                     </div>
-                  </div>
-                  <div class="login_form">
-                     <form action="login.php" method="post">
-                        <fieldset>
-                           <div class="field">
-                              <label class="label_field">username</label>
-                              <input type="text" id="inputname" name="username" placeholder="E-mail" />
-                           </div>
-                           <div class="field">
-                              <label class="label_field">Password</label>
-                              <input type="password" name="password" placeholder="Password" />
-                           </div>
-                           <div class="field">
-                              <label class="label_field hidden">hidden label</label>
-                              <label class="form-check-label"><input type="checkbox" class="form-check-input"> Remember Me</label>
-                              <a class="forgot" href="">Forgotten Password?</a>
-                           </div>
-                           <div class="field margin_0">
-                              <label class="label_field hidden">hidden label</label>
-                              <button class="main_bt">Sing In</button>
-                           </div>
-                        </fieldset>
-                     </form>
-                  </div>
-               </div>
+<!-- Sign In Start -->
+        <div class="container-fluid">
+            <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                     <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
+                        <form action="proses.php" method="post">
+                            <div class="form-floating mb-3">
+                                <input type="tetx" class="form-control" id="floatingInput" id="inputname" name="username" placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+
+                            <div class="form-floating mb-4">
+                                <input type="password" class="form-control" name="password" placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                                <a href="">Forgot Password</a>
+                            </div>
+                            <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign In</button>
+                        </form>
+                        <p class="text-center mb-0">Tidak punya akun? |<a href="registrasi.php">Daftar</a></p>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      
-   </body>
-</html>
+        </div>
+        <!-- Sign In End -->
+    </div>
+
+    <?php
+    include "footer.php";
+    ?>

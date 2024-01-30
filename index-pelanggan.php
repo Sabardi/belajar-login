@@ -1,9 +1,9 @@
 <?php
+
 include "database.php";
 $database = new database();
 $data_transaksi = $database->Data_transaksi_sukses();
-
-include "header.php";
+include "header-pelanggan.php";
 ?>
 <main>
     <div class="container-fluid px-4">
@@ -60,5 +60,5 @@ include "header.php";
 </main>
 
 <?php
-include "footer.php";
+include "footer-pelanggan.php";
 ?>
